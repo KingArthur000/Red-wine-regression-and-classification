@@ -170,5 +170,7 @@ Here the PCA components are stored in the pca variable, and the weights are fit 
 *	The remaining results are found using the same method as in the previous question.
 
 **The Output**
+
+<img src="/docs/Q_4.png">
  
 There is an increase in accuracy in the logistic model compared to the previous PC analysis, but there is a decrease in the accuracy in SVM and Naïve Bayesian models, this may be due to the removal of essential data, because the original dataset has 11 attributes but now it has only 4 attributes and this may lead to loss of essential classification data. But the linear model still has the same metrics due to more samples at the Bad quality and linear model couldn’t account for the unbalance in the dataset. The F1 scores of the SVM has decreased terribly and the Naïve Bayesian metrics have improved a lot. So here Naïve Bayesian proves to be a great estimate. All the classes are provided with necessary weights to account for the unbalance in the dataset.
