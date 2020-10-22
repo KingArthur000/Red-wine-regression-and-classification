@@ -35,6 +35,8 @@ plt.show()
 
 **The Output**
  
+ <img src="/docs/Q_1_1.png">
+ <img src="/docs/Q_1_2.png">
  
 Hence the model mildly fits the data. The is around 0.45, which is pretty low. And the linear fit is also visualized. The code is present in Q_1.py file
 
@@ -61,6 +63,8 @@ test['class'].value_counts().plot(kind='bar',figsize=(10,8),title="Actual Qualit
 
 **The output**
  
+ <img src="/docs/Q_2_1_1.png">
+ <img src="/docs/Q_2_1_2.png">
  
 The logistic classifier proves to be a pretty decent estimate for the classification problem and in general to the dataset. It has an accuracy of 89.4%. The model can be used as a classifier compared to the linear classifier that is discussed below, in terms of model construction.
 
@@ -70,6 +74,8 @@ The logistic classifier proves to be a pretty decent estimate for the classifica
 
 **The output**
  
+ <img src="/docs/Q_2_2_1.png">
+ <img src="/docs/Q_2_2_2.png">
  
 The linear classifier proves to be a pretty bad estimate for the classification problem and in general to the dataset. It has an accuracy of 88.75%. Because even though the accuracy is high the model estimates ‘Bad’ for every tuple in the test set. Hence it is very bad estimate.
 
@@ -87,7 +93,8 @@ svm.fit(x_train, y_train)
 
 **The output**
  
- 
+ <img src="/docs/Q_2_3_1.png">
+ <img src="/docs/Q_2_3_2.png">
 
 The SVM classifier proves to be a pretty good estimate for the classification problem and in general to the dataset. It has an accuracy of 88.5%. A much better model compared to the linear classifier in terms of model construction. 
 
@@ -101,6 +108,8 @@ naivebayes = GaussianNB().fit(x_train, y_train)
 
 **The output**
  
+ <img src="/docs/Q_2_4_1.png">
+ <img src="/docs/Q_2_4_2.png">
  
 The Naïve Bayes classifier proves to be a pretty good estimate for the classification problem and in general to the dataset. It has an accuracy of 85.4%. A much better model compared to the linear classifier in terms of model construction.
 
@@ -138,6 +147,8 @@ Recall = tp/(tp+fn)
 F1 = (2*Precision*Recall)/(Precision+Recall)
 
 **The output**
+
+<img src="/docs/Q_3.png">
  
 The Measures for the classifiers are attached above, from the results we could observe that even though linear classifier has a decent accuracy even though it predicted all the values to be Bad quality. So accuracy seems to be a bad measure for estimating a model. But seeing the precision logistic proves to be great classifier, on based on recall Naïve Bayesian is a great model. The naïve Bayesian model is also a great estimate when it comes to the F1 score, even though it is pretty bad according to modern estimators. Logistic is more sensitive and naïve Bayesian is more specific. So comparing performance across various models can prove to be a great advantage when selecting the model for actual usage.
 
@@ -159,6 +170,8 @@ Here the PCA components are stored in the pca variable, and the weights are fit 
 *	The remaining results are found using the same method as in the previous question.
 
 **The output**
+
+<img src="/docs/Q_4_1.png">
  
 There is a decrease in accuracy for the logistic model and there is no difference in the linear model as the weights given to the classes are also not impacting the results. But for the remaining classifiers weights are been assigned, 0.8 for the Good class and 0.2 for the Bad class, as the dataset is hugely unbalanced. The accuracy has improved for the SVM and Naïve Bayesian model. So there is an advantage in removing least correlated variables from the training and testing set to get better derivation. There are also changes in other metrics due to the removal of the data from the dataset, as even a small data can also matter for the classification of the data.
 ### b. Using 4 attributes PCA
